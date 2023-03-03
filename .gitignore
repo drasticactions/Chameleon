@@ -21,8 +21,10 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 .DS_Store
+*.swp
 
 ## Build generated
+.build/
 build/
 DerivedData
 

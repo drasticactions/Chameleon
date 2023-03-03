@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "Chameleon",
-    platforms: [.ios(.v16)],
+    platforms: [.iOS(.v16)],
     products: [
         .library(
             name: "Chameleon",
@@ -18,15 +18,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Chameleon",
-            path:"[PackageRoot]/Pod/Classes/Objective-C"
-            publicHeadersPath: "[PackageRoot]/Pod/Objective-C"
+            name: "Chameleon"
         ),
         .target(
             name: "ChameleonSwift",
-            dependencies: ["Chameleon"],
-            path:"[PackageRoot]/Pod/Classes/Swift"
+            dependencies: ["Chameleon"]
         )
-    ]
+    ],
     swiftLanguageVersions: [.v5]
 )

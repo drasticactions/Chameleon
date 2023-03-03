@@ -13,18 +13,18 @@ Pod::Spec.new do |s|
   s.source       		= { :git => "https://github.com/ViccAlexander/Chameleon.git", 
                      		:tag => s.version.to_s }
 
-  s.public_header_files = 'Pod/Classes/Objective-C/**/*.h'
+  s.public_header_files = 'Sources/Chameleon/include/*.h'
   s.frameworks   = 'UIKit', 'QuartzCore', 'CoreGraphics'
 
   s.default_subspecs = 'Default'
 
   s.subspec 'Default' do |ss|
-    ss.source_files = 'Pod/Classes/Objective-C/**/*.{h,m}'
+    ss.source_files = 'Sources/Chameleon/**/*.{h,m}'
   end
 
   s.subspec 'Swift' do |ss|
       ss.ios.deployment_target = '8.0'
-      ss.source_files = 'Pod/Classes/Swift/ChameleonShorthand.swift'
+      ss.source_files = 'Sources/Chameleon/ChameleonShorthand.swift'
       ss.dependency 'ChameleonFramework/Default'
   end
 end
