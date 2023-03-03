@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Chameleon",
+    platforms: [.ios(.v16)],
     products: [
         .library(
             name: "Chameleon",
@@ -18,12 +19,14 @@ let package = Package(
     targets: [
         .target(
             name: "Chameleon",
-            path:"Pod/Classes/Objective-C"
+            path:"[PackageRoot]/Pod/Classes/Objective-C"
+            publicHeadersPath: "[PackageRoot]/Pod/Objective-C"
         ),
         .target(
             name: "ChameleonSwift",
             dependencies: ["Chameleon"],
-            path:"Pod/Classes/Swift"
+            path:"[PackageRoot]/Pod/Classes/Swift"
         )
     ]
+    swiftLanguageVersions: [.v5]
 )
