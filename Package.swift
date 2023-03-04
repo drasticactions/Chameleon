@@ -18,7 +18,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Chameleon"
+            name: "Chameleon",
+            publicHeadersPath: "include"
         ),
         .target(
             name: "ChameleonSwift",
