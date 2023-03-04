@@ -12,7 +12,7 @@ let package = Package(
             targets: ["Chameleon"]),
         .library(
             name: "ChameleonSwift",
-            targets: ["ChameleonSwift"]),
+            targets: ["ChameleonSwift"])
     ],
     dependencies: [
     ],
