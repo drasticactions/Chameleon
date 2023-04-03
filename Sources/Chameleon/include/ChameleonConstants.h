@@ -14,8 +14,13 @@
  *
  *  @since 2.0
  */
+
+#if TARGET_OS_TV
+
+#else
 extern const UIStatusBarStyle UIStatusBarStyleContrast;
 
 @interface ChameleonConstants : NSObject
 
 @end
+#endif

@@ -15,6 +15,9 @@
     NSUInteger count = containers.count;
     NSAssert(count <= 10, @"The count of containers greater than 10 is not supported.");
     
+#if TARGET_OS_TV
+    return nil;
+#else
     return [self appearanceWhenContainedIn:
             count > 0 ? containers[0] : nil,
             count > 1 ? containers[1] : nil,
@@ -27,6 +30,7 @@
             count > 8 ? containers[8] : nil,
             count > 9 ? containers[9] : nil,
             nil];
+#endif
 }
 
 @end

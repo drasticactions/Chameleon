@@ -147,7 +147,8 @@
     return [number boolValue];
 }
 
-
+#if TARGET_OS_TV
+#else
 #pragma mark - Public Methods
 
 - (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
@@ -210,5 +211,5 @@
     
     return (luminance > 0.6f) ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
 }
-
+#endif
 @end

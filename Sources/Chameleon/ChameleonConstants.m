@@ -8,8 +8,9 @@
 
 #import "ChameleonConstants.h"
 
+#if TARGET_OS_TV
+#else
 const UIStatusBarStyle UIStatusBarStyleContrast = 100;
-
 @implementation ChameleonConstants
-
 @end
+#endif

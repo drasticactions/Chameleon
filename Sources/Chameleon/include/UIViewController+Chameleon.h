@@ -59,6 +59,9 @@
  *
  *  @since 2.0
  */
-- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
+#if TARGET_OS_TV
 
+#else
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
+#endif
 @end

@@ -20,8 +20,11 @@
  *
  *  @since 2.0
  */
-- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
+#if TARGET_OS_TV
 
+#else
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
+#endif
 /**
  *  Hides the hairline view at the bottom of a navigation bar. The default value is @c NO.
  *
